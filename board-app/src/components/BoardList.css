@@ -1,0 +1,159 @@
+/* 전체 스타일 */
+.boardList {
+    font-family: 'Arial', sans-serif;
+    margin: 20px auto;
+    padding: 20px 70px;
+    color: #333;
+    width: 1024px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 제목 스타일 */
+h2 {
+    text-align: center;
+    color: #444;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 테이블 스타일 */
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* 테이블 헤더 및 셀 스타일 */
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: left;
+}
+
+/* 테이블 헤더 스타일 */
+th {
+    background-color: #f9f9f9;
+    color: #555;
+    font-weight: 600;
+}
+
+/* 짝수 행 배경색 */
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* 행 hover 스타일 */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* 첫 번째 열 스타일 */
+th:nth-child(1), td:nth-child(1) {
+    width: 10%;
+    word-break: break-word;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #388e3c;
+    transform: scale(0.95);
+}
+
+.contents {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.contents h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #003f08; 
+}
+
+.contents div {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555; 
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.writer{
+    display: flex;
+    justify-content: end;
+    font-weight: bold;
+}
+.con{
+    margin: 50px 0;
+    text-align: left;
+    line-height: 25px;
+}
+.wrtCon{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.wrtCon input, .wrtCon textarea{
+    width: 700px;
+    margin: 0 auto;
+}
+.wrtCon input{
+    height: 30px;
+    font-size: 18px;
+}
+.wrtCon textarea{
+    font-size: 18px;
+    height: 300px;
+}
+
+.readonly-input,
+.input-field,
+.textarea-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    
+}
+
+.readonly-input {
+    background-color: #e9ecef;
+}
+.mg-top-20{
+    margin-top: 20px;
+    justify-content: end;
+    display: flex;
+}

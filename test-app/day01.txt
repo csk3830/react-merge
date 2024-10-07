@@ -1,0 +1,29 @@
+react 설치
+node란 화면을 서버처럼 운영할 수 있도록 크로스 플랫폼을 지원.
+- node.js 다운로드 https://nodejs.org/en => 메인에 Download Node.js (LTS) 클릭하여 다운
+설치 -> 동의 및 Next를 쭉 눌러서 설치 진행
+
+cmd창 node -v
+node를 깔면 npm(node package manager)도 깔림.
+npm이 깔려있으면, 부트스트랩 같은 경우 npm명령어(npm install bootstrap@5.3.3)로 부트스트랩 다운 가능
+
+- 환경변수 설정 => path
+- vs-code => 터미널
+node -v / npm -v  버전 확인
+npm이 있어야 리액트를 설치할 수 있다.
+
+npx : npm처럼 node를 설치하면 자동으로 설치됨.
+npx create-react-app test-app 
+
+npm i -g npm@latest
+
+cmd명령어
+dir : 전체 폴더 값 보기
+cd : 폴더 이동
+d:  : d드라이브로 이동
+
+
+cd test-app
+npm start
+리액트는 localhost 3000번 포트를 사용
+

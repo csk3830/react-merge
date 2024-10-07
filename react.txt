@@ -1,0 +1,194 @@
+react 설치
+node란 화면을 서버처럼 운영할 수 있도록 크로스 플랫폼을 지원.
+- node.js 다운로드 https://nodejs.org/en => 메인에 Download Node.js (LTS) 클릭하여 다운
+설치 -> 동의 및 Next를 쭉 눌러서 설치 진행
+
+cmd창 node -v
+node를 깔면 npm(node package manager)도 깔림.
+npm이 깔려있으면, 부트스트랩 같은 경우 npm명령어(npm install bootstrap@5.3.3)로 부트스트랩 다운 가능
+
+- 환경변수 설정 => path
+- vs-code => 터미널
+node -v / npm -v  버전 확인
+npm이 있어야 리액트를 설치할 수 있다.
+
+npx : npm처럼 node를 설치하면 자동으로 설치됨.
+npx create-react-app 폴더명
+npx create-react-app test-app 
+
+npm i -g npm@latest   => 전체 재설치
+
+cmd명령어
+dir : 전체 폴더 값 보기
+cd : 폴더 이동
+d:  : d드라이브로 이동
+cd.. : 상위폴더 이동
+
+
+cd test-app   => 리액트 폴더에서 start해야 됨. 
+npm start  => 리액트 서버 시작
+ctrl+c, y  => 종료 
+리액트는 localhost 3000번 포트를 사용
+
+---------------------------------------------------------
+react : 싱글 페이지 컴포넌트 방식
+
+컴포넌트 : 대문자로 시작 원칙
+재사용성 높음. 확장성도 뛰어남.
+js => JSX 구문 사용
+
+virtual DOM => 랜더링 속도 up, 최적화 속도 up
+
+HOOK => 함수 컴포넌트에 기능을 추가할 수 있게 해주는 기능
+
+props => 매개변수
+상위 컴포넌트에서 하위 컴포넌트로 데이터를 전달할 때 사용
+
+App.js => index.js => index.html   root 삽입
+
+node_modules => 고용량으로 압축시 오래걸림. => 삭제
+node_modules 재설치 => npm install
+
+-------------------------------------------------------------
+네비게이션 바 처럼 a태그 링크를 설정하면 해당 컴포넌트로 이동
+npm i react-router-dom 설치
+<Link to='컴포넌트명'>test</Link>
+
+
+-------------------------------------------------------------
+my-app 리액트 폴더 생성
+컴포넌트 1,2,3 각각을 누르면 이동되도록 라우터로 연결
+
+<header>
+comp1  comp2   comp3
+-------------------------------
+Home영역입니다.
+comp1영역입니다.
+comp2영역입니다.
+comp3영역입니다.
+-------------------------------
+<footer>
+
+
+------------------------------------
+
+3일차
+npx create-react-app list-app 새로운 앱 생성
+
+array(배열)를 렌더링 시 key의 존재 유무에 따라 
+업데이트, 삭제, 추가 시 효율적으로 랜더링 됨.
+
+users.map((u,i)=>(
+    <User user={u} key={i}/>
+))
+---------------------------------------------
+useRef()로 컴포넌트 안의 변수 만들기
+- 컴포넌트에서 특정 DOM을 선택할 때 사용
+- 컴포넌트 안에서 조회, 수정을 할 수 있는 변수를 관리할 수 있음.
+
+useRef()로 관리하는 변수는 값이 바뀐다고 하여 컴포넌트가 재렌더링 되지 않음
+useState보다 좀 더 효율적이다. 
+
+useRef()를 통해 관리하는 값들..
+- setTimeout / setInterval을 통해서 만들어지는 id
+- 조회, 수정, 삭제 시 사용되는 id
+- 외부 라이브러리를 사용하여 생성된 인스턴스
+-----------------------------------------
+useRef()   /   useState() 
+- 비슷하게 어떤 값을 저장하는 저장공간의 역할
+- 컴포넌트 안에서 조회 및 수정할 수 있는 변수를 관리
+- useRef()로 관리하는 변수는 값이 바뀐다고 해도 
+  컴포넌트가 재렌더링 되지 않음.
+- state : 변화 => 렌더링 => 컴포넌트 내부 변수들 초기화
+- ref : 변화 => 렌더링X => 내부 변수들 값 유지
+-   =>변경시 렌더링을 발생시키지 말아야 하는 값을 다룰 때 사용
+-   =>변화는 감지해야 하지만, 그 변화가 렌더링을 발생시키지 않아야 할 때 사용
+
+------------------------------------------
+맛집 리스트 (store)
+Store.jsx / StoreList.jsx / CreateStore.jsx
+const stores = [{id:1, store:'월미당', storeItem:'쌀국수'}]
+------------------------------------------
+
+4일차
+useMemo() => 리액트에서 컴포넌트 성능을 최적화 하는데 사용되는 훅
+memo => memoization의 약자. 메모리에 넣기.
+동일한 계산을 반복해야 할 때, 이전의 값을 메모리에 저장함으로써 반복수행을 제거하여 프로그램 실행 속도를
+빠르게 해주는 기술
+
+함수형 컴포넌트가 렌더링 => 컴포넌트 함수 호출 => 모든 내부 변수 초기화
+
+useMemo 렌더링 => 함수 호출 => memoize 된 함수를 재사용
+
+
+--------------------------------------------
+axios(외장 라이브러리 별도 설치 필요)
+   =>   js  ajax (js 내장 라이브러리)
+
+url : 요청 주소
+method : get(요청), post(삽입), put(수정), delete(삭제)
+
+response : 응답 객체
+request : 요청 객체
+axios.get( url [, config] )
+axios.post( url [, config] [, data] )
+axios.put( url [, config] [, data] )
+axios.delete( url [, config] )
+
+https://jsonplaceholder.typicode.com/users
+
+-----------------------
+useEffect() : hook
+컴포넌트가 렌더링 될때, 혹은 업데이트 될 때 실행되는 hook
+useEffect((function), deps)
+function :실행시킬 함수
+deps : 배열형태
+[] 빈배열 : 마운트 될 때만 실행
+x : 매번 렌더링 될 때마다 실행
+[name] : 업데이트 될 때마다 실행
+-----------------------
+05일차
+
+useReducer : 요청 상태에 따라 관리하기 react의 고급기술인 리덕스에서 자주 사용.
+
+//action : dispatch 함수로 받을 액션
+const reducer = ( state, action ) =>{
+  switch(action.type) {
+    case "INCREMENT":
+      return state + 1;
+    case "DECREMENT":
+      return state - 1;
+  }
+}
+
+//state : 현재 상태 값 => 변수
+//dispatch  : state 값을 업데이트 하고, 재렌더링을 촉발하는 함수
+const [ state, dispatch ] = useReducer( reducer, 0 );
+
+return (
+  <h3>{state}<h3>
+  <button onClick={()=>{dispatch({type: 'INCREMENT'}) }}>+</button>
+  <button onClick={()=>{dispatch({type: 'DECREMENT'}) }}>-</button>
+)
+
+-------------------------------
+06일차
+src 폴터 내부에 server.js 파일 생성 후 붙여넣기
+
+​
+
+npm i express ⇒ 설치 : 서버
+
+npm i mysql ⇒ 설치 : DB
+
+npm i axios ⇒ 설치 : 비동기
+
+npm i cors ⇒ 설치 :  서버와 클라이언트 간의 자원공유 관리
+
+npm i json ⇒ 설치 : json
+
+npm i nodemon ⇒ 설치 : 자동감지 서버 재시작 도구 (소스코드의 변경이 발생하면 자동으로 서버 재시작)
+
+npm i react-router-dom ⇒ react 표준 라우팅 라이브러리 (컴포넌트간의 전환이 일어날때 화면 전환)
+
+

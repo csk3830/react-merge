@@ -1,0 +1,104 @@
+  .todoList {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todoList-items {
+    margin-top: 20px;
+  }
+  
+  .todoCreate {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .todoCreate input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .todoCreate input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .todoCreate button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .todoCreate button:hover {
+    background-color: #218838;
+  }
+  
+  .todoItem {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .todoItem h3{
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .todoItem-text {
+    cursor: pointer;
+    flex: 1;
+    text-decoration: none;
+  }
+  
+  .todoItem-text.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .remove-btn {
+    background-color: #dc3575;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #91234d;
+  }
+  
+  .title {
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    font-size: 100px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #28a745, #dc3575);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
